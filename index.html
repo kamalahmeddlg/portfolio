@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <meta name="description" content="Kamal Ahmed - MCA Graduate | Full Stack Developer specializing in Web Development, App Development, Digital Marketing, and AI Tools. Hire me for your next project.">
+  <meta name="keywords" content="Full Stack Developer, Web Development, App Development, Digital Marketing, Freelance Developer, Kamal Ahmed">
+  <meta name="author" content="Kamal Ahmed">
+  <title>Kamal Ahmed | Full Stack Developer & Freelancer</title>
+  <!-- Bootstrap 5 CSS + Icons + Google Fonts + Font Awesome -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0A0C10;
+      color: #EFF3F8;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    /* Custom dark blue gradient theme */
+    :root {
+      --bg-dark: #0A0C10;
+      --card-bg: rgba(18, 22, 30, 0.75);
+      --glass-border: rgba(0, 255, 255, 0.15);
+      --primary-glow: #00c6ff;
+      --secondary-glow: #0072ff;
+      --neon-blue: #0af;
+      --gradient-1: linear-gradient(135deg, #00c6ff, #0072ff);
+    }
+
+    /* Glassmorphism base */
+    .glass-card {
+      background: rgba(18, 22, 30, 0.65);
+      backdrop-filter: blur(12px);
+      border-radius: 28px;
+      border: 1px solid rgba(0, 198, 255, 0.2);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .glass-card:hover {
+      border-color: rgba(0, 198, 255, 0.5);
+      box-shadow: 0 12px 40px rgba(0, 114, 255, 0.2);
+      transform: translateY(-5px);
+    }
+
+    /* Neumorphism soft elements */
+    .neumorph-btn {
+      background: #12161E;
+      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6), -5px -5px 15px rgba(40, 50, 68, 0.2);
+      border: none;
+      transition: 0.2s;
+    }
+
+    .neumorph-btn:active {
+      transform: scale(0.97);
+      box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.5), inset -2px -2px 5px rgba(70, 80, 100, 0.1);
+    }
+
+    /* Navbar styling */
+    .navbar {
+      background: rgba(10, 12, 16, 0.85);
+      backdrop-filter: blur(15px);
+      border-bottom: 1px solid rgba(0, 198, 255, 0.25);
+      transition: all 0.3s;
+      padding: 12px 0;
+    }
+
+    .navbar-brand {
+      font-weight: 700;
+      font-size: 1.7rem;
+      background: var(--gradient-1);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .nav-link {
+      font-weight: 500;
+      margin: 0 10px;
+      color: #CFE3FF !important;
+      transition: 0.3s;
+    }
+
+    .nav-link:hover, .nav-link.active {
+      color: #0af !important;
+      text-shadow: 0 0 5px rgba(0, 170, 255, 0.5);
+    }
+
+    /* Hero section */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 120px 0 80px;
+      position: relative;
+    }
+
+    .hero h1 {
+      font-size: 3.8rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #FFFFFF, #00c6ff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .typing {
+      border-right: 3px solid #0af;
+      white-space: nowrap;
+      overflow: hidden;
+      animation: blinkCursor 0.75s step-end infinite;
+    }
+
+    @keyframes blinkCursor {
+      from, to { border-color: transparent; }
+      50% { border-color: #0af; }
+    }
+
+    .btn-glow {
+      background: linear-gradient(90deg, #0072ff, #00c6ff);
+      border: none;
+      padding: 12px 32px;
+      font-weight: 600;
+      border-radius: 40px;
+      color: white;
+      box-shadow: 0 4px 15px rgba(0, 114, 255, 0.4);
+      transition: all 0.3s;
+    }
+
+    .btn-glow:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 25px rgba(0, 198, 255, 0.6);
+      color: white;
+    }
+
+    .btn-outline-glass {
+      background: transparent;
+      border: 1.5px solid #0af;
+      border-radius: 40px;
+      padding: 12px 32px;
+      color: #0af;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .btn-outline-glass:hover {
+      background: rgba(0, 170, 255, 0.15);
+      color: #fff;
+      border-color: #fff;
+    }
+
+    /* skill progress bar custom */
+    .skill-item {
+      margin-bottom: 1.4rem;
+    }
+    .skill-info {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 5px;
+    }
+    .progress {
+      background-color: #1e2a3a;
+      border-radius: 30px;
+      height: 8px;
+      overflow: hidden;
+    }
+    .progress-bar {
+      background: linear-gradient(90deg, #00c6ff, #0072ff);
+      border-radius: 30px;
+    }
+
+    /* service cards icons */
+    .service-icon {
+      font-size: 2.5rem;
+      background: linear-gradient(135deg, #00c6ff, #0072ff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 15px;
+    }
+
+    /* project cards */
+    .project-card {
+      background: rgba(20, 25, 35, 0.7);
+      backdrop-filter: blur(8px);
+      border-radius: 24px;
+      padding: 1.5rem;
+      transition: 0.3s;
+      border: 1px solid rgba(0,198,255,0.2);
+      height: 100%;
+    }
+    .project-card h5 {
+      font-weight: 700;
+    }
+    .project-links a {
+      color: #0af;
+      margin-right: 15px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .project-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* contact & whatsapp floating */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background-color: #25D366;
+      color: white;
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 30px;
+      line-height: 55px;
+      z-index: 100;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      transition: 0.2s;
+    }
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+      background-color: #20b859;
+      color: white;
+    }
+
+    footer {
+      background: #05070A;
+      border-top: 1px solid rgba(0,198,255,0.2);
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 2.5rem;
+      position: relative;
+      display: inline-block;
+    }
+    .section-title:after {
+      content: '';
+      position: absolute;
+      bottom: -12px;
+      left: 0;
+      width: 70px;
+      height: 4px;
+      background: var(--gradient-1);
+      border-radius: 4px;
+    }
+
+    /* responsive adjustments */
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.5rem; }
+      .hero { text-align: center; padding-top: 100px; }
+      .section-title { font-size: 2rem; }
+      .navbar-brand { font-size: 1.4rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Sticky Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">Kamal<span style="color:#0af;">.dev</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="hero">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-8 mx-auto text-center" data-aos="fade-up">
+        <p class="text-primary mb-2">👋 Hello, I'm</p>
+        <h1 class="mb-3">Kamal Ahmed</h1>
+        <h3 class="mb-3 typing" id="typed-text" style="font-weight: 500; color: #B0E0FF;">MCA Graduate | Full Stack Developer</h3>
+        <p class="lead mb-4">Building scalable web apps, mobile solutions, AI tools & digital growth strategies. 4+ years freelance experience.</p>
+        <div class="d-flex flex-wrap justify-content-center gap-3">
+          <a href="#contact" class="btn btn-glow">🚀 Hire Me</a>
+          <a href="#" class="btn btn-outline-glass" id="downloadCVBtn"><i class="fas fa-download me-2"></i>Download CV</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About Me -->
+<section id="about" class="py-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10" data-aos="fade-right">
+        <div class="glass-card p-4 p-md-5">
+          <h2 class="section-title">About Me</h2>
+          <p class="mt-3 fs-5">I'm Kamal Ahmed, an MCA graduate and passionate Full Stack Developer with expertise in modern web technologies (React, Node.js, PHP) and app development. I've helped startups and businesses build robust digital products — from dynamic websites to AI-powered tools. My approach blends clean code, user-centric design, and performance optimization.</p>
+          <p class="fs-5">Beyond coding, I specialize in Digital Marketing, SEO, and WhatsApp/SMS integrations to drive real business growth. I’ve successfully delivered 30+ projects globally, ensuring high quality and client satisfaction. Let’s collaborate to turn your vision into reality.</p>
+          <div class="mt-4">
+            <div class="d-flex flex-wrap gap-4">
+              <div><i class="fas fa-envelope text-info me-2"></i> kamal@kamal.dev</div>
+              <div><i class="fas fa-phone-alt text-info me-2"></i> +91 98765 43210</div>
+              <div><i class="fab fa-whatsapp text-success me-2"></i> +91 98765 43210 (WhatsApp)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="py-5">
+  <div class="container">
+    <h2 class="section-title text-center" data-aos="fade-up">Technical Expertise</h2>
+    <div class="row g-4 mt-2">
+      <div class="col-md-6" data-aos="fade-right">
+        <div class="glass-card p-4 h-100">
+          <h4><i class="fas fa-code me-2"></i> Core Languages</h4>
+          <div class="skill-item"><div class="skill-info"><span>C / C++</span><span>85%</span></div><div class="progress"><div class="progress-bar" style="width:85%"></div></div></div>
+          <div class="skill-item"><div class="skill-info"><span>JavaScript (ES6+)</span><span>90%</span></div><div class="progress"><div class="progress-bar" style="width:90%"></div></div></div>
+          <div class="skill-item"><div class="skill-info"><span>Python</span><span>80%</span></div><div class="progress"><div class="progress-bar" style="width:80%"></div></div></div>
+          <div class="skill-item"><div class="skill-info"><span>PHP</span><span>75%</span></div><div class="progress"><div class="progress-bar" style="width:75%"></div></div></div>
+          <div class="skill-item"><div class="skill-info"><span>R (Data)</span><span>60%</span></div><div class="progress"><div class="progress-bar" style="width:60%"></div></div></div>
+        </div>
+      </div>
+      <div class="col-md-6" data-aos="fade-left">
+        <div class="glass-card p-4 h-100">
+          <h4><i class="fab fa-react me-2"></i> Frameworks & Tools</h4>
+          <div class="skill-item"><div class="skill-info"><span>React.js</span><span>88%</span></div><div class="progress"><div class="progress-bar" style="width:88%"></div></div></div>
+          <div class="skill-item"><div class="skill-info"><span>Node.js</span><span>82%</span></div><div class="progress"><div class="progress-bar" style="width:82%"></div></div></div>
+          <div class="skill-item"><div class="skill-info"><span>HTML5/CSS3</span><span>95%</span></div><div class="progress"><div class="progress-bar" style="width:95%"></div></div></div>
+          <div class="skill-item"><div class="skill-info"><span>App Dev (React Native)</span><span>75%</span></div><div class="progress"><div class="progress-bar" style="width:75%"></div></div></div>
+          <div class="skill-item"><div class="skill-info"><span>AI Tools Integration</span><span>70%</span></div><div class="progress"><div class="progress-bar" style="width:70%"></div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="py-5">
+  <div class="container">
+    <h2 class="section-title text-center" data-aos="fade-up">What I Offer</h2>
+    <div class="row g-4 mt-3">
+      <div class="col-md-6 col-lg-4" data-aos="zoom-in"><div class="glass-card p-4 text-center h-100"><i class="fas fa-laptop-code service-icon"></i><h5>Website Development</h5><p>Custom responsive websites with modern tech, SEO-optimized and fast.</p></div></div>
+      <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100"><div class="glass-card p-4 text-center h-100"><i class="fas fa-globe service-icon"></i><h5>Web Application</h5><p>Scalable web apps using React, Node.js, and databases.</p></div></div>
+      <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200"><div class="glass-card p-4 text-center h-100"><i class="fas fa-mobile-alt service-icon"></i><h5>Mobile App Development</h5><p>Cross-platform iOS/Android apps using React Native & Flutter.</p></div></div>
+      <div class="col-md-6 col-lg-4" data-aos="zoom-in"><div class="glass-card p-4 text-center h-100"><i class="fas fa-chart-line service-icon"></i><h5>Digital Marketing</h5><p>SEO, social media campaigns, analytics to boost your brand.</p></div></div>
+      <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100"><div class="glass-card p-4 text-center h-100"><i class="fas fa-server service-icon"></i><h5>Domain & Hosting</h5><p>Domain registration, reliable web hosting setup & maintenance.</p></div></div>
+      <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200"><div class="glass-card p-4 text-center h-100"><i class="fas fa-envelope service-icon"></i><h5>Business Email & SMS/WhatsApp</h5><p>Professional emails, WhatsApp Business API & SMS integration.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="py-5">
+  <div class="container">
+    <h2 class="section-title text-center" data-aos="fade-up">Featured Projects</h2>
+    <div class="row g-4 mt-2">
+      <div class="col-md-6 col-lg-4" data-aos="flip-left">
+        <div class="project-card">
+          <i class="fas fa-store fa-2x text-info mb-3"></i>
+          <h5>AI E-commerce Suite</h5>
+          <p>Full-stack MERN with AI recommendation & chatbot integration. Improved sales by 40%.</p>
+          <div class="project-links"><a href="#"><i class="fab fa-github"></i> GitHub</a><a href="#"><i class="fas fa-external-link-alt"></i> Demo</a></div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4" data-aos="flip-left" data-aos-delay="100">
+        <div class="project-card">
+          <i class="fas fa-chalkboard-user fa-2x text-info mb-3"></i>
+          <h5>Smart School Manager</h5>
+          <p>Web app with PHP/Laravel, SMS + WhatsApp notifications for parents/teachers.</p>
+          <div class="project-links"><a href="#"><i class="fab fa-github"></i> GitHub</a><a href="#"><i class="fas fa-external-link-alt"></i> Demo</a></div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4" data-aos="flip-left" data-aos-delay="200">
+        <div class="project-card">
+          <i class="fas fa-robot fa-2x text-info mb-3"></i>
+          <h5>AI Content Genie</h5>
+          <p>Python + OpenAI tool for automated blog & social media content. Used by 500+ marketers.</p>
+          <div class="project-links"><a href="#"><i class="fab fa-github"></i> GitHub</a><a href="#"><i class="fas fa-external-link-alt"></i> Demo</a></div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4" data-aos="flip-left">
+        <div class="project-card">
+          <i class="fas fa-chart-simple fa-2x text-info mb-3"></i>
+          <h5>Analytics Dashboard</h5>
+          <p>React + D3 real-time dashboard for business metrics, with digital marketing insights.</p>
+          <div class="project-links"><a href="#"><i class="fab fa-github"></i> GitHub</a><a href="#"><i class="fas fa-external-link-alt"></i> Demo</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials (optional but adds trust) -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="section-title text-center" data-aos="fade-up">Client Love</h2>
+    <div class="row mt-4 g-4">
+      <div class="col-md-6" data-aos="fade-right">
+        <div class="glass-card p-4">
+          <i class="fas fa-quote-left fa-2x text-info opacity-50"></i>
+          <p class="mt-2">"Kamal delivered a top-notch web application ahead of schedule. His expertise in React and communication is stellar. Highly recommended!"</p>
+          <h6 class="mt-3">— Riya Sharma, Startup Founder</h6>
+        </div>
+      </div>
+      <div class="col-md-6" data-aos="fade-left">
+        <div class="glass-card p-4">
+          <i class="fas fa-quote-left fa-2x text-info opacity-50"></i>
+          <p class="mt-2">"He integrated WhatsApp & SMS gateway seamlessly into our CRM. Also handled digital marketing - boosted leads by 60%. Amazing work."</p>
+          <h6 class="mt-3">— Vikram Mehta, Business Owner</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-5">
+  <div class="container">
+    <div class="glass-card p-4 p-md-5" data-aos="zoom-in-up">
+      <h2 class="section-title">Let's Connect</h2>
+      <div class="row">
+        <div class="col-lg-6 mb-4">
+          <p class="fs-5">Ready to build something amazing? Reach out for collaborations, freelance projects, or just a chat.</p>
+          <div class="mt-4">
+            <div class="mb-3"><i class="fas fa-phone-alt text-info me-3"></i> <strong>Call:</strong> +91 98765 43210</div>
+            <div class="mb-3"><i class="fas fa-envelope text-info me-3"></i> <strong>Email:</strong> hello@kamal.dev</div>
+            <div class="mb-3"><i class="fab fa-whatsapp text-success me-3"></i> <strong>WhatsApp:</strong> +91 98765 43210</div>
+          </div>
+          <a href="https://wa.me/919876543210" class="btn btn-glow mt-3" target="_blank"><i class="fab fa-whatsapp me-2"></i>Chat on WhatsApp</a>
+        </div>
+        <div class="col-lg-6">
+          <form id="contactForm">
+            <div class="mb-3"><input type="text" class="form-control bg-dark text-white border-0 rounded-pill p-3" placeholder="Your Name" required></div>
+            <div class="mb-3"><input type="email" class="form-control bg-dark text-white border-0 rounded-pill p-3" placeholder="Email Address" required></div>
+            <div class="mb-3"><textarea rows="3" class="form-control bg-dark text-white border-0 rounded-4 p-3" placeholder="Project details..."></textarea></div>
+            <button type="submit" class="btn btn-glow w-100 rounded-pill">Send Message <i class="fas fa-paper-plane ms-2"></i></button>
+            <p class="small text-muted mt-3">I'll get back within 24 hours</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="pt-5 pb-4">
+  <div class="container text-center">
+    <div class="mb-3">
+      <a href="#" class="text-white-50 me-3"><i class="fab fa-github fa-lg"></i></a>
+      <a href="#" class="text-white-50 me-3"><i class="fab fa-linkedin-in fa-lg"></i></a>
+      <a href="#" class="text-white-50 me-3"><i class="fab fa-twitter fa-lg"></i></a>
+      <a href="#" class="text-white-50"><i class="fab fa-instagram fa-lg"></i></a>
+    </div>
+    <p class="small text-white-50">© 2025 Kamal Ahmed — Full Stack Developer. All rights reserved. | Built with <i class="fas fa-heart text-danger"></i> for clients worldwide.</p>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp Button -->
+<a href="https://wa.me/919876543210" class="whatsapp-float" target="_blank" aria-label="WhatsApp Chat">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  // Init AOS
+  AOS.init({ duration: 800, once: true });
+
+  // Smooth scrolling for all anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const targetId = this.getAttribute('href');
+      if(targetId === "#" || targetId === "") return;
+      const targetElem = document.querySelector(targetId);
+      if(targetElem) {
+        e.preventDefault();
+        targetElem.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+  // Typing animation effect for hero subtitle
+  const textArray = ["MCA Graduate | Full Stack Developer", "Web & App Creator", "AI Tools Specialist", "Freelance Expert"];
+  let index = 0;
+  let charIndex = 0;
+  let currentText = "";
+  const typedElement = document.getElementById("typed-text");
+  function typeEffect() {
+    if (charIndex < textArray[index].length) {
+      typedElement.textContent += textArray[index].charAt(charIndex);
+      charIndex++;
+      setTimeout(typeEffect, 80);
+    } else {
+      setTimeout(eraseEffect, 2000);
+    }
+  }
+  function eraseEffect() {
+    if (charIndex > 0) {
+      typedElement.textContent = textArray[index].substring(0, charIndex-1);
+      charIndex--;
+      setTimeout(eraseEffect, 40);
+    } else {
+      index = (index + 1) % textArray.length;
+      setTimeout(typeEffect, 300);
+    }
+  }
+  typeEffect();
+
+  // Download CV (simulate download)
+  const downloadBtn = document.getElementById("downloadCVBtn");
+  downloadBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    // Creating a dummy CV blob for demo; in real project link actual pdf.
+    const cvContent = `Kamal Ahmed - Full Stack Developer\nExperience: 4+ years freelance\nSkills: React, Node, Python, PHP, App Dev, AI Tools\nEmail: kamal@kamal.dev\nPhone: +91 98765 43210`;
+    const blob = new Blob([cvContent], {type: 'text/plain'});
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = 'Kamal_Ahmed_CV.txt';
+    link.click();
+    URL.revokeObjectURL(link.href);
+  });
+
+  // Simple contact form alert
+  const contactForm = document.getElementById("contactForm");
+  if(contactForm) {
+    contactForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      alert("📩 Thanks for reaching out! Kamal will respond within 24 hours via WhatsApp or email.");
+      contactForm.reset();
+    });
+  }
+
+  // Navbar active link highlight on scroll
+  const sections = document.querySelectorAll("section");
+  const navLinks = document.querySelectorAll(".nav-link");
+  window.addEventListener("scroll", () => {
+    let current = "";
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 100;
+      if(scrollY >= sectionTop) current = section.getAttribute("id");
+    });
+    navLinks.forEach(link => {
+      link.classList.remove("active");
+      if(link.getAttribute("href") === `#${current}`) link.classList.add("active");
+    });
+  });
+</script>
+</body>
+</html>
