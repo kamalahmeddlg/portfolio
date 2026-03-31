@@ -1,85 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <meta name="description" content="Kamal Ahmed - MCA Graduate | Full Stack Developer specializing in Web Development, App Development, Digital Marketing, and AI Tools. Hire me for your next project.">
-  <meta name="keywords" content="Full Stack Developer, Web Development, App Development, Digital Marketing, Freelance Developer, Kamal Ahmed">
-  <meta name="author" content="Kamal Ahmed">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="description" content="Kamal Ahmed - MCA Graduate | Full Stack Developer specializing in Web Development, App Development, Digital Marketing, and AI Tools. Hire me for your next project." />
+  <meta name="keywords" content="Kamal Ahmed, Full Stack Developer, Web Development, App Development, Digital Marketing, Freelance Developer, Portfolio" />
+  <meta name="author" content="Kamal Ahmed" />
+  <meta property="og:title" content="Kamal Ahmed | Full Stack Developer & Freelancer" />
+  <meta property="og:description" content="Professional portfolio of Kamal Ahmed. Website Development, App Development, Digital Marketing, Hosting, WhatsApp Integration and more." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=Kamal+Ahmed+Portfolio" />
+  <meta name="theme-color" content="#0A0C10" />
   <title>Kamal Ahmed | Full Stack Developer & Freelancer</title>
-  <!-- Bootstrap 5 CSS + Icons + Google Fonts + Font Awesome -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
-  <!-- AOS Animation Library -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
   <style>
+    :root {
+      --bg-dark: #0a0c10;
+      --bg-soft: #11151d;
+      --card-bg: rgba(18, 22, 30, 0.72);
+      --glass-border: rgba(0, 198, 255, 0.18);
+      --primary-glow: #00c6ff;
+      --secondary-glow: #0072ff;
+      --text-main: #eff3f8;
+      --text-soft: #bfd1e5;
+      --gradient-1: linear-gradient(135deg, #00c6ff, #0072ff);
+      --shadow-main: 0 12px 40px rgba(0, 0, 0, 0.35);
+      --radius-lg: 28px;
+      --radius-md: 20px;
+      --radius-sm: 14px;
+    }
+
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background: #0A0C10;
-      color: #EFF3F8;
-      overflow-x: hidden;
       scroll-behavior: smooth;
     }
 
-    /* Custom dark blue gradient theme */
-    :root {
-      --bg-dark: #0A0C10;
-      --card-bg: rgba(18, 22, 30, 0.75);
-      --glass-border: rgba(0, 255, 255, 0.15);
-      --primary-glow: #00c6ff;
-      --secondary-glow: #0072ff;
-      --neon-blue: #0af;
-      --gradient-1: linear-gradient(135deg, #00c6ff, #0072ff);
+    body {
+      font-family: "Inter", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(0, 198, 255, 0.12), transparent 30%),
+        radial-gradient(circle at bottom right, rgba(0, 114, 255, 0.10), transparent 25%),
+        var(--bg-dark);
+      color: var(--text-main);
+      overflow-x: hidden;
     }
 
-    /* Glassmorphism base */
+    a {
+      text-decoration: none;
+    }
+
+    .section-padding {
+      padding: 100px 0;
+    }
+
     .glass-card {
-      background: rgba(18, 22, 30, 0.65);
-      backdrop-filter: blur(12px);
-      border-radius: 28px;
-      border: 1px solid rgba(0, 198, 255, 0.2);
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-      transition: all 0.3s ease;
+      background: var(--card-bg);
+      backdrop-filter: blur(14px);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-main);
+      transition: all 0.35s ease;
     }
 
     .glass-card:hover {
-      border-color: rgba(0, 198, 255, 0.5);
-      box-shadow: 0 12px 40px rgba(0, 114, 255, 0.2);
-      transform: translateY(-5px);
+      transform: translateY(-6px);
+      border-color: rgba(0, 198, 255, 0.35);
+      box-shadow: 0 18px 50px rgba(0, 114, 255, 0.12);
     }
 
-    /* Neumorphism soft elements */
-    .neumorph-btn {
-      background: #12161E;
-      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6), -5px -5px 15px rgba(40, 50, 68, 0.2);
-      border: none;
-      transition: 0.2s;
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 18px;
+      position: relative;
+      display: inline-block;
     }
 
-    .neumorph-btn:active {
-      transform: scale(0.97);
-      box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.5), inset -2px -2px 5px rgba(70, 80, 100, 0.1);
+    .section-title::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -12px;
+      width: 72px;
+      height: 4px;
+      border-radius: 999px;
+      background: var(--gradient-1);
     }
 
-    /* Navbar styling */
+    .section-subtitle {
+      color: var(--text-soft);
+      max-width: 700px;
+      margin: 22px auto 0;
+      line-height: 1.7;
+    }
+
+    /* Loader */
+    #loader {
+      position: fixed;
+      inset: 0;
+      background: #05070a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 99999;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .loader-ring {
+      width: 64px;
+      height: 64px;
+      border: 4px solid rgba(255,255,255,0.12);
+      border-top: 4px solid var(--primary-glow);
+      border-radius: 50%;
+      animation: spin 0.9s linear infinite;
+    }
+
+    @keyframes spin {
+      100% { transform: rotate(360deg); }
+    }
+
+    /* Navbar */
     .navbar {
-      background: rgba(10, 12, 16, 0.85);
-      backdrop-filter: blur(15px);
-      border-bottom: 1px solid rgba(0, 198, 255, 0.25);
-      transition: all 0.3s;
-      padding: 12px 0;
+      background: rgba(10, 12, 16, 0.82);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(0, 198, 255, 0.18);
+      padding: 14px 0;
+      transition: all 0.3s ease;
+    }
+
+    .navbar.scrolled {
+      background: rgba(8, 10, 14, 0.95);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
     }
 
     .navbar-brand {
-      font-weight: 700;
       font-size: 1.7rem;
+      font-weight: 800;
       background: var(--gradient-1);
       -webkit-background-clip: text;
       background-clip: text;
@@ -87,39 +151,82 @@
     }
 
     .nav-link {
+      color: #d8e7f7 !important;
       font-weight: 500;
-      margin: 0 10px;
-      color: #CFE3FF !important;
-      transition: 0.3s;
+      margin: 0 8px;
+      position: relative;
     }
 
-    .nav-link:hover, .nav-link.active {
-      color: #0af !important;
-      text-shadow: 0 0 5px rgba(0, 170, 255, 0.5);
+    .nav-link:hover,
+    .nav-link.active {
+      color: #66d9ff !important;
     }
 
-    /* Hero section */
+    .nav-link.active::after,
+    .nav-link:hover::after {
+      content: "";
+      position: absolute;
+      left: 8px;
+      right: 8px;
+      bottom: -6px;
+      height: 2px;
+      background: var(--gradient-1);
+      border-radius: 999px;
+    }
+
+    /* Hero */
     .hero {
       min-height: 100vh;
       display: flex;
       align-items: center;
-      padding: 120px 0 80px;
+      padding: 140px 0 90px;
       position: relative;
     }
 
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: rgba(0, 198, 255, 0.10);
+      border: 1px solid rgba(0, 198, 255, 0.2);
+      color: #9fe9ff;
+      font-size: 0.95rem;
+      margin-bottom: 22px;
+    }
+
     .hero h1 {
-      font-size: 3.8rem;
+      font-size: 4rem;
       font-weight: 800;
-      background: linear-gradient(135deg, #FFFFFF, #00c6ff);
+      line-height: 1.15;
+      background: linear-gradient(135deg, #ffffff, #9fe9ff 50%, #00c6ff);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
+      margin-bottom: 16px;
+    }
+
+    .hero h3 {
+      min-height: 42px;
+      color: #bfe8ff;
+      font-weight: 500;
+      margin-bottom: 18px;
+    }
+
+    .hero p.lead {
+      color: var(--text-soft);
+      font-size: 1.14rem;
+      line-height: 1.8;
+      max-width: 760px;
+      margin: 0 auto 28px;
     }
 
     .typing {
       border-right: 3px solid #0af;
       white-space: nowrap;
       overflow: hidden;
+      display: inline-block;
       animation: blinkCursor 0.75s step-end infinite;
     }
 
@@ -129,448 +236,874 @@
     }
 
     .btn-glow {
-      background: linear-gradient(90deg, #0072ff, #00c6ff);
+      background: var(--gradient-1);
+      color: #fff;
       border: none;
-      padding: 12px 32px;
+      border-radius: 999px;
+      padding: 13px 30px;
       font-weight: 600;
-      border-radius: 40px;
-      color: white;
-      box-shadow: 0 4px 15px rgba(0, 114, 255, 0.4);
-      transition: all 0.3s;
+      box-shadow: 0 8px 24px rgba(0, 114, 255, 0.35);
+      transition: all 0.3s ease;
     }
 
     .btn-glow:hover {
-      transform: scale(1.05);
-      box-shadow: 0 8px 25px rgba(0, 198, 255, 0.6);
-      color: white;
+      color: #fff;
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 12px 30px rgba(0, 198, 255, 0.35);
     }
 
     .btn-outline-glass {
       background: transparent;
-      border: 1.5px solid #0af;
-      border-radius: 40px;
-      padding: 12px 32px;
-      color: #0af;
+      color: #66d9ff;
+      border: 1.5px solid rgba(102, 217, 255, 0.65);
+      border-radius: 999px;
+      padding: 13px 30px;
       font-weight: 600;
-      transition: 0.3s;
+      transition: all 0.3s ease;
     }
 
     .btn-outline-glass:hover {
-      background: rgba(0, 170, 255, 0.15);
+      background: rgba(0, 170, 255, 0.12);
       color: #fff;
       border-color: #fff;
     }
 
-    /* skill progress bar custom */
-    .skill-item {
-      margin-bottom: 1.4rem;
+    .trust-badges {
+      margin-top: 22px;
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
     }
+
+    .trust-badge {
+      font-size: 0.92rem;
+      padding: 9px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.08);
+      color: #dcefff;
+    }
+
+    /* About */
+    .info-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 16px;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.06);
+      color: #d8e7f7;
+      margin: 8px 10px 0 0;
+      word-break: break-word;
+    }
+
+    /* Skills */
+    .skill-item {
+      margin-bottom: 1.3rem;
+    }
+
     .skill-info {
       display: flex;
       justify-content: space-between;
-      margin-bottom: 5px;
-    }
-    .progress {
-      background-color: #1e2a3a;
-      border-radius: 30px;
-      height: 8px;
-      overflow: hidden;
-    }
-    .progress-bar {
-      background: linear-gradient(90deg, #00c6ff, #0072ff);
-      border-radius: 30px;
+      margin-bottom: 7px;
+      font-size: 0.95rem;
     }
 
-    /* service cards icons */
-    .service-icon {
-      font-size: 2.5rem;
-      background: linear-gradient(135deg, #00c6ff, #0072ff);
+    .progress {
+      background-color: #1a2230;
+      border-radius: 999px;
+      height: 9px;
+      overflow: hidden;
+    }
+
+    .progress-bar {
+      background: var(--gradient-1);
+      border-radius: 999px;
+    }
+
+    /* Services */
+    .service-card,
+    .project-card,
+    .stat-card {
+      height: 100%;
+      padding: 30px 24px;
+      border-radius: var(--radius-md);
+      background: rgba(20, 25, 35, 0.7);
+      border: 1px solid rgba(0,198,255,0.16);
+      transition: all 0.3s ease;
+    }
+
+    .service-card:hover,
+    .project-card:hover,
+    .stat-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(0,198,255,0.35);
+      box-shadow: 0 14px 35px rgba(0, 114, 255, 0.12);
+    }
+
+    .service-icon,
+    .project-icon,
+    .stat-icon {
+      font-size: 2.2rem;
+      background: var(--gradient-1);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
-      margin-bottom: 15px;
+      margin-bottom: 16px;
     }
 
-    /* project cards */
-    .project-card {
-      background: rgba(20, 25, 35, 0.7);
-      backdrop-filter: blur(8px);
-      border-radius: 24px;
-      padding: 1.5rem;
-      transition: 0.3s;
-      border: 1px solid rgba(0,198,255,0.2);
-      height: 100%;
-    }
-    .project-card h5 {
+    .service-card h5,
+    .project-card h5,
+    .stat-card h5 {
       font-weight: 700;
-    }
-    .project-links a {
-      color: #0af;
-      margin-right: 15px;
-      text-decoration: none;
-      font-weight: 500;
-    }
-    .project-links a:hover {
-      text-decoration: underline;
+      margin-bottom: 12px;
     }
 
-    /* contact & whatsapp floating */
+    .service-card p,
+    .project-card p,
+    .stat-card p {
+      color: var(--text-soft);
+      line-height: 1.7;
+      margin-bottom: 0;
+    }
+
+    /* Projects */
+    .project-card {
+      padding: 28px;
+    }
+
+    .project-links {
+      margin-top: 18px;
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .project-links a {
+      color: #79dcff;
+      font-weight: 600;
+      transition: 0.25s ease;
+    }
+
+    .project-links a:hover {
+      color: #fff;
+    }
+
+    /* CTA */
+    .cta-box {
+      text-align: center;
+      padding: 50px 24px;
+    }
+
+    .cta-box p {
+      color: var(--text-soft);
+      margin: 18px auto 28px;
+      max-width: 700px;
+    }
+
+    /* Contact */
+    .contact-box p {
+      color: var(--text-soft);
+    }
+
+    .contact-detail {
+      margin-bottom: 14px;
+      color: #d8e7f7;
+    }
+
+    .contact-detail i {
+      width: 22px;
+    }
+
+    .form-control {
+      background: #10151e !important;
+      color: #fff !important;
+      border: 1px solid rgba(255,255,255,0.08) !important;
+      padding: 15px 18px;
+    }
+
+    .form-control::placeholder {
+      color: #94a8bc;
+    }
+
+    .form-control:focus {
+      box-shadow: 0 0 0 0.2rem rgba(0, 198, 255, 0.12);
+      border-color: rgba(0, 198, 255, 0.35) !important;
+    }
+
+    /* Footer */
+    footer {
+      background: #05070a;
+      border-top: 1px solid rgba(0,198,255,0.18);
+    }
+
+    .social-link {
+      width: 42px;
+      height: 42px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      color: #d8e7f7;
+      background: rgba(255,255,255,0.05);
+      margin: 0 6px;
+      transition: 0.3s ease;
+    }
+
+    .social-link:hover {
+      background: rgba(0, 198, 255, 0.16);
+      color: #fff;
+      transform: translateY(-3px);
+    }
+
+    /* Floating WhatsApp */
     .whatsapp-float {
       position: fixed;
       bottom: 25px;
       right: 25px;
-      background-color: #25D366;
-      color: white;
-      width: 55px;
-      height: 55px;
+      width: 58px;
+      height: 58px;
       border-radius: 50%;
-      text-align: center;
+      background: #25d366;
+      color: #fff;
       font-size: 30px;
-      line-height: 55px;
-      z-index: 100;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-      transition: 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+      z-index: 999;
+      transition: all 0.3s ease;
     }
+
     .whatsapp-float:hover {
-      transform: scale(1.1);
-      background-color: #20b859;
-      color: white;
+      color: #fff;
+      transform: scale(1.08);
+      background: #1fba58;
     }
 
-    footer {
-      background: #05070A;
-      border-top: 1px solid rgba(0,198,255,0.2);
+    @media (max-width: 991px) {
+      .hero h1 {
+        font-size: 3rem;
+      }
     }
 
-    .section-title {
-      font-size: 2.5rem;
-      font-weight: 700;
-      margin-bottom: 2.5rem;
-      position: relative;
-      display: inline-block;
-    }
-    .section-title:after {
-      content: '';
-      position: absolute;
-      bottom: -12px;
-      left: 0;
-      width: 70px;
-      height: 4px;
-      background: var(--gradient-1);
-      border-radius: 4px;
-    }
-
-    /* responsive adjustments */
     @media (max-width: 768px) {
-      .hero h1 { font-size: 2.5rem; }
-      .hero { text-align: center; padding-top: 100px; }
-      .section-title { font-size: 2rem; }
-      .navbar-brand { font-size: 1.4rem; }
+      .hero {
+        text-align: center;
+        padding-top: 120px;
+      }
+
+      .hero h1 {
+        font-size: 2.4rem;
+      }
+
+      .hero h3 {
+        font-size: 1.1rem;
+        min-height: 34px;
+      }
+
+      .section-title {
+        font-size: 2rem;
+      }
+
+      .navbar-brand {
+        font-size: 1.4rem;
+      }
+
+      .typing {
+        white-space: normal;
+        border-right: none;
+      }
     }
   </style>
 </head>
 <body>
-
-<!-- Sticky Navbar -->
-<nav class="navbar navbar-expand-lg fixed-top">
-  <div class="container">
-    <a class="navbar-brand" href="#">Kamal<span style="color:#0af;">.dev</span></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-      </ul>
-    </div>
+  <!-- Loader -->
+  <div id="loader">
+    <div class="loader-ring"></div>
+    <p class="mb-0 text-light">Loading Portfolio...</p>
   </div>
-</nav>
 
-<!-- Hero Section -->
-<section id="home" class="hero">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-lg-8 mx-auto text-center" data-aos="fade-up">
-        <p class="text-primary mb-2">👋 Hello, I'm</p>
-        <h1 class="mb-3">Kamal Ahmed</h1>
-        <h3 class="mb-3 typing" id="typed-text" style="font-weight: 500; color: #B0E0FF;">MCA Graduate | Full Stack Developer</h3>
-        <p class="lead mb-4">Building scalable web apps, mobile solutions, AI tools & digital growth strategies. 4+ years freelance experience.</p>
-        <div class="d-flex flex-wrap justify-content-center gap-3">
-          <a href="#contact" class="btn btn-glow">🚀 Hire Me</a>
-          <a href="#" class="btn btn-outline-glass" id="downloadCVBtn"><i class="fas fa-download me-2"></i>Download CV</a>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top" id="mainNavbar">
+    <div class="container">
+      <a class="navbar-brand" href="#home">Kamal<span style="color:#0af;">.dev</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-9 mx-auto text-center" data-aos="fade-up">
+          <div class="hero-badge">
+            <i class="fas fa-bolt"></i>
+            Available for freelance work
+          </div>
+
+          <h1>Kamal Ahmed</h1>
+          <h3 class="typing" id="typed-text">MCA Graduate | Full Stack Developer</h3>
+
+          <p class="lead">
+            I help businesses grow with high-performing websites, web apps, digital tools, and online solutions that look professional and deliver real results.
+          </p>
+
+          <div class="d-flex flex-wrap justify-content-center gap-3">
+            <a href="#contact" class="btn btn-glow">
+              <i class="fas fa-paper-plane me-2"></i>Hire Me
+            </a>
+            <a href="#" class="btn btn-outline-glass" id="downloadCVBtn">
+              <i class="fas fa-download me-2"></i>Download CV
+            </a>
+          </div>
+
+          <p class="mt-3 text-light small">
+            💬 Quick response | ⚡ Fast delivery | ✅ Client-focused solutions
+          </p>
+
+          <div class="trust-badges">
+            <div class="trust-badge">✔ Freelance Developer</div>
+            <div class="trust-badge">✔ Web & App Solutions</div>
+            <div class="trust-badge">✔ Digital Growth Support</div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- About Me -->
-<section id="about" class="py-5">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-10" data-aos="fade-right">
-        <div class="glass-card p-4 p-md-5">
-          <h2 class="section-title">About Me</h2>
-          <p class="mt-3 fs-5">I'm Kamal Ahmed, an MCA graduate and passionate Full Stack Developer with expertise in modern web technologies (React, Node.js, PHP) and app development. I've helped startups and businesses build robust digital products — from dynamic websites to AI-powered tools. My approach blends clean code, user-centric design, and performance optimization.</p>
-          <p class="fs-5">Beyond coding, I specialize in Digital Marketing, SEO, and WhatsApp/SMS integrations to drive real business growth. I’ve successfully delivered 30+ projects globally, ensuring high quality and client satisfaction. Let’s collaborate to turn your vision into reality.</p>
-          <div class="mt-4">
-            <div class="d-flex flex-wrap gap-4">
-              <div><i class="fas fa-envelope text-info me-2"></i> kamalahmeddlg@mail.com</div>
-              <div><i class="fas fa-phone-alt text-info me-2"></i> +91 6001877757</div>
-              <div><i class="fab fa-whatsapp text-success me-2"></i> +91 6001877757 (WhatsApp)</div>
+  <!-- About -->
+  <section id="about" class="section-padding">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-10" data-aos="fade-right">
+          <div class="glass-card p-4 p-md-5">
+            <h2 class="section-title">About Me</h2>
+            <p class="mt-4 fs-5" style="color:#d8e7f7; line-height:1.9;">
+              I'm <strong>Kamal Ahmed</strong>, an MCA graduate and Full Stack Developer passionate about creating modern, responsive, and user-friendly digital products. I work on websites, web applications, digital tools, business solutions, and online branding systems that help clients grow professionally.
+            </p>
+            <p class="fs-5" style="color:#d8e7f7; line-height:1.9;">
+              Along with development, I also work on digital marketing, domain and hosting setup, business email services, and SMS/WhatsApp-based solutions. My goal is simple: build clean, useful, and professional solutions that make a real impact.
+            </p>
+
+            <div class="mt-4">
+              <span class="info-chip"><i class="fas fa-envelope text-info"></i> support@ilovetoolshub.com</span>
+              <span class="info-chip"><i class="fas fa-phone-alt text-info"></i> +91 6001877757</span>
+              <span class="info-chip"><i class="fab fa-whatsapp text-success"></i> WhatsApp Available</span>
+              <span class="info-chip"><i class="fas fa-location-dot text-info"></i> India</span>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Skills Section -->
-<section id="skills" class="py-5">
-  <div class="container">
-    <h2 class="section-title text-center" data-aos="fade-up">Technical Expertise</h2>
-    <div class="row g-4 mt-2">
-      <div class="col-md-6" data-aos="fade-right">
-        <div class="glass-card p-4 h-100">
-          <h4><i class="fas fa-code me-2"></i> Core Languages</h4>
-          <div class="skill-item"><div class="skill-info"><span>C / C++</span><span>85%</span></div><div class="progress"><div class="progress-bar" style="width:85%"></div></div></div>
-          <div class="skill-item"><div class="skill-info"><span>JavaScript (ES6+)</span><span>90%</span></div><div class="progress"><div class="progress-bar" style="width:90%"></div></div></div>
-          <div class="skill-item"><div class="skill-info"><span>Python</span><span>80%</span></div><div class="progress"><div class="progress-bar" style="width:80%"></div></div></div>
-          <div class="skill-item"><div class="skill-info"><span>PHP</span><span>75%</span></div><div class="progress"><div class="progress-bar" style="width:75%"></div></div></div>
-          <div class="skill-item"><div class="skill-info"><span>R (Data)</span><span>60%</span></div><div class="progress"><div class="progress-bar" style="width:60%"></div></div></div>
-        </div>
+  <!-- Skills -->
+  <section id="skills" class="section-padding pt-0">
+    <div class="container">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <h2 class="section-title">Technical Expertise</h2>
+        <p class="section-subtitle">
+          A strong mix of programming, frontend, backend, and practical business-focused digital skills.
+        </p>
       </div>
-      <div class="col-md-6" data-aos="fade-left">
-        <div class="glass-card p-4 h-100">
-          <h4><i class="fab fa-react me-2"></i> Frameworks & Tools</h4>
-          <div class="skill-item"><div class="skill-info"><span>React.js</span><span>88%</span></div><div class="progress"><div class="progress-bar" style="width:88%"></div></div></div>
-          <div class="skill-item"><div class="skill-info"><span>Node.js</span><span>82%</span></div><div class="progress"><div class="progress-bar" style="width:82%"></div></div></div>
-          <div class="skill-item"><div class="skill-info"><span>HTML5/CSS3</span><span>95%</span></div><div class="progress"><div class="progress-bar" style="width:95%"></div></div></div>
-          <div class="skill-item"><div class="skill-info"><span>App Dev (React Native)</span><span>75%</span></div><div class="progress"><div class="progress-bar" style="width:75%"></div></div></div>
-          <div class="skill-item"><div class="skill-info"><span>AI Tools Integration</span><span>70%</span></div><div class="progress"><div class="progress-bar" style="width:70%"></div></div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- Services Section -->
-<section id="services" class="py-5">
-  <div class="container">
-    <h2 class="section-title text-center" data-aos="fade-up">What I Offer</h2>
-    <div class="row g-4 mt-3">
-      <div class="col-md-6 col-lg-4" data-aos="zoom-in"><div class="glass-card p-4 text-center h-100"><i class="fas fa-laptop-code service-icon"></i><h5>Website Development</h5><p>Custom responsive websites with modern tech, SEO-optimized and fast.</p></div></div>
-      <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100"><div class="glass-card p-4 text-center h-100"><i class="fas fa-globe service-icon"></i><h5>Web Application</h5><p>Scalable web apps using React, Node.js, and databases.</p></div></div>
-      <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200"><div class="glass-card p-4 text-center h-100"><i class="fas fa-mobile-alt service-icon"></i><h5>Mobile App Development</h5><p>Cross-platform iOS/Android apps using React Native & Flutter.</p></div></div>
-      <div class="col-md-6 col-lg-4" data-aos="zoom-in"><div class="glass-card p-4 text-center h-100"><i class="fas fa-chart-line service-icon"></i><h5>Digital Marketing</h5><p>SEO, social media campaigns, analytics to boost your brand.</p></div></div>
-      <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100"><div class="glass-card p-4 text-center h-100"><i class="fas fa-server service-icon"></i><h5>Domain & Hosting</h5><p>Domain registration, reliable web hosting setup & maintenance.</p></div></div>
-      <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200"><div class="glass-card p-4 text-center h-100"><i class="fas fa-envelope service-icon"></i><h5>Business Email & SMS/WhatsApp</h5><p>Professional emails, WhatsApp Business API & SMS integration.</p></div></div>
-    </div>
-  </div>
-</section>
+      <div class="row g-4">
+        <div class="col-md-6" data-aos="fade-right">
+          <div class="glass-card p-4 h-100">
+            <h4 class="mb-4"><i class="fas fa-code me-2 text-info"></i>Core Skills</h4>
 
-<!-- Projects Section -->
-<section id="projects" class="py-5">
-  <div class="container">
-    <h2 class="section-title text-center" data-aos="fade-up">Featured Projects</h2>
-    <div class="row g-4 mt-2">
-      <div class="col-md-6 col-lg-4" data-aos="flip-left">
-        <div class="project-card">
-          <i class="fas fa-store fa-2x text-info mb-3"></i>
-          <h5>AI E-commerce Suite</h5>
-          <p>Full-stack MERN with AI recommendation & chatbot integration. Improved sales by 40%.</p>
-          <div class="project-links"><a href="#"><i class="fab fa-github"></i> GitHub</a><a href="#"><i class="fas fa-external-link-alt"></i> Demo</a></div>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4" data-aos="flip-left" data-aos-delay="100">
-        <div class="project-card">
-          <i class="fas fa-chalkboard-user fa-2x text-info mb-3"></i>
-          <h5>Smart School Manager</h5>
-          <p>Web app with PHP/Laravel, SMS + WhatsApp notifications for parents/teachers.</p>
-          <div class="project-links"><a href="#"><i class="fab fa-github"></i> GitHub</a><a href="#"><i class="fas fa-external-link-alt"></i> Demo</a></div>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4" data-aos="flip-left" data-aos-delay="200">
-        <div class="project-card">
-          <i class="fas fa-robot fa-2x text-info mb-3"></i>
-          <h5>AI Content Genie</h5>
-          <p>Python + OpenAI tool for automated blog & social media content. Used by 500+ marketers.</p>
-          <div class="project-links"><a href="#"><i class="fab fa-github"></i> GitHub</a><a href="#"><i class="fas fa-external-link-alt"></i> Demo</a></div>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4" data-aos="flip-left">
-        <div class="project-card">
-          <i class="fas fa-chart-simple fa-2x text-info mb-3"></i>
-          <h5>Analytics Dashboard</h5>
-          <p>React + D3 real-time dashboard for business metrics, with digital marketing insights.</p>
-          <div class="project-links"><a href="#"><i class="fab fa-github"></i> GitHub</a><a href="#"><i class="fas fa-external-link-alt"></i> Demo</a></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+            <div class="skill-item">
+              <div class="skill-info"><span>C / C++</span><span>85%</span></div>
+              <div class="progress"><div class="progress-bar" style="width:85%"></div></div>
+            </div>
 
-<!-- Testimonials (optional but adds trust) -->
-<section class="py-5">
-  <div class="container">
-    <h2 class="section-title text-center" data-aos="fade-up">Client Love</h2>
-    <div class="row mt-4 g-4">
-      <div class="col-md-6" data-aos="fade-right">
-        <div class="glass-card p-4">
-          <i class="fas fa-quote-left fa-2x text-info opacity-50"></i>
-          <p class="mt-2">"Kamal delivered a top-notch web application ahead of schedule. His expertise in React and communication is stellar. Highly recommended!"</p>
-          <h6 class="mt-3">— Riya Sharma, Startup Founder</h6>
-        </div>
-      </div>
-      <div class="col-md-6" data-aos="fade-left">
-        <div class="glass-card p-4">
-          <i class="fas fa-quote-left fa-2x text-info opacity-50"></i>
-          <p class="mt-2">"He integrated WhatsApp & SMS gateway seamlessly into our CRM. Also handled digital marketing - boosted leads by 60%. Amazing work."</p>
-          <h6 class="mt-3">— Vikram Mehta, Business Owner</h6>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+            <div class="skill-item">
+              <div class="skill-info"><span>JavaScript</span><span>90%</span></div>
+              <div class="progress"><div class="progress-bar" style="width:90%"></div></div>
+            </div>
 
-<!-- Contact Section -->
-<section id="contact" class="py-5">
-  <div class="container">
-    <div class="glass-card p-4 p-md-5" data-aos="zoom-in-up">
-      <h2 class="section-title">Let's Connect</h2>
-      <div class="row">
-        <div class="col-lg-6 mb-4">
-          <p class="fs-5">Ready to build something amazing? Reach out for collaborations, freelance projects, or just a chat.</p>
-          <div class="mt-4">
-            <div class="mb-3"><i class="fas fa-phone-alt text-info me-3"></i> <strong>Call:</strong> +91 60018 77757</div>
-            <div class="mb-3"><i class="fas fa-envelope text-info me-3"></i> <strong>Email:</strong> kamalahmeddlg@gmail.com</div>
-            <div class="mb-3"><i class="fab fa-whatsapp text-success me-3"></i> <strong>WhatsApp:</strong> +91 60018 77757</div>
+            <div class="skill-item">
+              <div class="skill-info"><span>Python</span><span>80%</span></div>
+              <div class="progress"><div class="progress-bar" style="width:80%"></div></div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-info"><span>PHP</span><span>82%</span></div>
+              <div class="progress"><div class="progress-bar" style="width:82%"></div></div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-info"><span>R</span><span>65%</span></div>
+              <div class="progress"><div class="progress-bar" style="width:65%"></div></div>
+            </div>
           </div>
-          <a href="https://wa.me/916001877757" class="btn btn-glow mt-3" target="_blank"><i class="fab fa-whatsapp me-2"></i>Chat on WhatsApp</a>
         </div>
-        <div class="col-lg-6">
-          <form id="contactForm">
-            <div class="mb-3"><input type="text" class="form-control bg-dark text-white border-0 rounded-pill p-3" placeholder="Your Name" required></div>
-            <div class="mb-3"><input type="email" class="form-control bg-dark text-white border-0 rounded-pill p-3" placeholder="Email Address" required></div>
-            <div class="mb-3"><textarea rows="3" class="form-control bg-dark text-white border-0 rounded-4 p-3" placeholder="Project details..."></textarea></div>
-            <button type="submit" class="btn btn-glow w-100 rounded-pill">Send Message <i class="fas fa-paper-plane ms-2"></i></button>
-            <p class="small text-muted mt-3">I'll get back within 24 hours</p>
-          </form>
+
+        <div class="col-md-6" data-aos="fade-left">
+          <div class="glass-card p-4 h-100">
+            <h4 class="mb-4"><i class="fas fa-laptop-code me-2 text-info"></i>Web & Tools</h4>
+
+            <div class="skill-item">
+              <div class="skill-info"><span>HTML5 / CSS3</span><span>95%</span></div>
+              <div class="progress"><div class="progress-bar" style="width:95%"></div></div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-info"><span>React.js</span><span>84%</span></div>
+              <div class="progress"><div class="progress-bar" style="width:84%"></div></div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-info"><span>Node.js</span><span>78%</span></div>
+              <div class="progress"><div class="progress-bar" style="width:78%"></div></div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-info"><span>Digital Marketing</span><span>80%</span></div>
+              <div class="progress"><div class="progress-bar" style="width:80%"></div></div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-info"><span>AI Tools</span><span>75%</span></div>
+              <div class="progress"><div class="progress-bar" style="width:75%"></div></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Footer -->
-<footer class="pt-5 pb-4">
-  <div class="container text-center">
-    <div class="mb-3">
-      <a href="#" class="text-white-50 me-3"><i class="fab fa-github fa-lg"></i></a>
-      <a href="#" class="text-white-50 me-3"><i class="fab fa-linkedin-in fa-lg"></i></a>
-      <a href="#" class="text-white-50 me-3"><i class="fab fa-twitter fa-lg"></i></a>
-      <a href="#" class="text-white-50"><i class="fab fa-instagram fa-lg"></i></a>
+  <!-- Stats -->
+  <section class="section-padding pt-0">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4" data-aos="zoom-in">
+          <div class="stat-card text-center">
+            <div class="stat-icon"><i class="fas fa-globe"></i></div>
+            <h5>Professional Websites</h5>
+            <p>Business, school, portfolio, and tools websites built with clean modern UI.</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+          <div class="stat-card text-center">
+            <div class="stat-icon"><i class="fas fa-mobile-screen-button"></i></div>
+            <h5>Business Solutions</h5>
+            <p>Web apps, dashboards, collection systems, and digital workflow solutions.</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+          <div class="stat-card text-center">
+            <div class="stat-icon"><i class="fas fa-bullhorn"></i></div>
+            <h5>Digital Growth</h5>
+            <p>SEO, online branding, hosting setup, business email, and marketing support.</p>
+          </div>
+        </div>
+      </div>
     </div>
-    <p class="small text-white-50">© 2026 Kamal Ahmed — Full Stack Developer. All rights reserved. | Built with <i class="fas fa-heart text-danger"></i> for clients worldwide.</p>
-  </div>
-</footer>
+  </section>
 
-<!-- Floating WhatsApp Button -->
-<a href="https://wa.me/916001877757" class="whatsapp-float" target="_blank" aria-label="WhatsApp Chat">
-  <i class="fab fa-whatsapp"></i>
-</a>
+  <!-- Services -->
+  <section id="services" class="section-padding pt-0">
+    <div class="container">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <h2 class="section-title">What I Offer</h2>
+        <p class="section-subtitle">
+          Complete digital services for schools, shops, startups, and businesses.
+        </p>
+      </div>
 
-<!-- Scripts -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  // Init AOS
-  AOS.init({ duration: 800, once: true });
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4" data-aos="zoom-in">
+          <div class="service-card text-center">
+            <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
+            <h5>Website Development</h5>
+            <p>Responsive, modern, and professional websites tailored to your brand and business goals.</p>
+          </div>
+        </div>
 
-  // Smooth scrolling for all anchor links
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      const targetId = this.getAttribute('href');
-      if(targetId === "#" || targetId === "") return;
-      const targetElem = document.querySelector(targetId);
-      if(targetElem) {
-        e.preventDefault();
-        targetElem.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
+        <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+          <div class="service-card text-center">
+            <div class="service-icon"><i class="fas fa-window-maximize"></i></div>
+            <h5>Web Application Development</h5>
+            <p>Custom systems like dashboards, ERP solutions, collection systems, and business tools.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+          <div class="service-card text-center">
+            <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+            <h5>App Development</h5>
+            <p>Simple, practical app solutions and mobile-first digital experiences for modern users.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-aos="zoom-in">
+          <div class="service-card text-center">
+            <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+            <h5>Digital Marketing</h5>
+            <p>Support for visibility, promotion, branding, and online growth through practical strategies.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+          <div class="service-card text-center">
+            <div class="service-icon"><i class="fas fa-server"></i></div>
+            <h5>Domain & Hosting</h5>
+            <p>Domain registration, hosting setup, deployment, and technical support for smooth launch.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+          <div class="service-card text-center">
+            <div class="service-icon"><i class="fas fa-envelope-open-text"></i></div>
+            <h5>Email, SMS & WhatsApp</h5>
+            <p>Business email, web SMS, WhatsApp integration, and communication-focused solutions.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Me -->
+  <section class="section-padding pt-0">
+    <div class="container">
+      <div class="glass-card cta-box" data-aos="fade-up">
+        <h2 class="section-title">Why Choose Me?</h2>
+        <p>
+          Affordable pricing, clean code, modern design, mobile responsiveness, fast communication, and practical solutions that focus on real business needs.
+        </p>
+        <div class="trust-badges">
+          <div class="trust-badge">✔ Affordable</div>
+          <div class="trust-badge">✔ Professional Design</div>
+          <div class="trust-badge">✔ Fast Support</div>
+          <div class="trust-badge">✔ Mobile Responsive</div>
+          <div class="trust-badge">✔ Business Focused</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section-padding pt-0">
+    <div class="container">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-subtitle">
+          Some of the practical systems and platforms I have worked on.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4" data-aos="flip-left">
+          <div class="project-card">
+            <div class="project-icon"><i class="fas fa-school"></i></div>
+            <h5>School Fee Collection System</h5>
+            <p>A responsive fee management interface to track student fees, payment status, and collection details.</p>
+            <div class="project-links">
+              <a href="#"><i class="fab fa-github me-1"></i>GitHub</a>
+              <a href="#"><i class="fas fa-external-link-alt me-1"></i>Demo</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-aos="flip-left" data-aos-delay="100">
+          <div class="project-card">
+            <div class="project-icon"><i class="fas fa-store"></i></div>
+            <h5>Shop Collection System</h5>
+            <p>A simple and useful system for managing shop money collection, payment entries, and daily records.</p>
+            <div class="project-links">
+              <a href="#"><i class="fab fa-github me-1"></i>GitHub</a>
+              <a href="#"><i class="fas fa-external-link-alt me-1"></i>Demo</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-aos="flip-left" data-aos-delay="200">
+          <div class="project-card">
+            <div class="project-icon"><i class="fas fa-screwdriver-wrench"></i></div>
+            <h5>iLoveToolsHub</h5>
+            <p>An online tools website offering utilities for productivity, image, PDF, and file-related tasks.</p>
+            <div class="project-links">
+              <a href="#"><i class="fab fa-github me-1"></i>GitHub</a>
+              <a href="https://kanchanlibrary.in/" target="_blank"><i class="fas fa-external-link-alt me-1"></i>Live</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-aos="flip-left">
+          <div class="project-card">
+            <div class="project-icon"><i class="fas fa-graduation-cap"></i></div>
+            <h5>School ERP Proposal System</h5>
+            <p>A complete digital school solution concept with admissions, attendance, fee tracking, reports, and parent-teacher access.</p>
+            <div class="project-links">
+              <a href="#"><i class="fab fa-github me-1"></i>GitHub</a>
+              <a href="#"><i class="fas fa-external-link-alt me-1"></i>Details</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-aos="flip-left" data-aos-delay="100">
+          <div class="project-card">
+            <div class="project-icon"><i class="fas fa-user-shield"></i></div>
+            <h5>NSFW Detection Project</h5>
+            <p>An MCA-level deep learning project focused on image moderation and explainable detection workflows.</p>
+            <div class="project-links">
+              <a href="#"><i class="fab fa-github me-1"></i>GitHub</a>
+              <a href="#"><i class="fas fa-external-link-alt me-1"></i>Overview</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-aos="flip-left" data-aos-delay="200">
+          <div class="project-card">
+            <div class="project-icon"><i class="fas fa-rocket"></i></div>
+            <h5>Freelance Business Portfolio</h5>
+            <p>A client-focused modern portfolio website to showcase services, projects, and contact channels professionally.</p>
+            <div class="project-links">
+              <a href="#"><i class="fab fa-github me-1"></i>GitHub</a>
+              <a href="#"><i class="fas fa-external-link-alt me-1"></i>Live</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section-padding pt-0">
+    <div class="container">
+      <div class="glass-card cta-box" data-aos="zoom-in-up">
+        <h2 class="section-title">Have a Project in Mind?</h2>
+        <p>
+          Let's build something professional, useful, and impressive for your business, school, or personal brand.
+        </p>
+        <a href="https://wa.me/916001877757" class="btn btn-glow" target="_blank">
+          <i class="fab fa-whatsapp me-2"></i>Chat on WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section-padding pt-0">
+    <div class="container">
+      <div class="glass-card p-4 p-md-5 contact-box" data-aos="fade-up">
+        <h2 class="section-title">Let's Connect</h2>
+
+        <div class="row mt-4">
+          <div class="col-lg-6 mb-4">
+            <p class="fs-5">
+              Ready to work together? Contact me for freelance projects, website development, app development, or digital business solutions.
+            </p>
+
+            <div class="mt-4">
+              <div class="contact-detail"><i class="fas fa-phone-alt text-info me-2"></i><strong>Call:</strong> +91 6001877757</div>
+              <div class="contact-detail"><i class="fas fa-envelope text-info me-2"></i><strong>Email:</strong> support@ilovetoolshub.com</div>
+              <div class="contact-detail"><i class="fab fa-whatsapp text-success me-2"></i><strong>WhatsApp:</strong> +91 6001877757</div>
+            </div>
+
+            <a href="https://wa.me/916001877757" class="btn btn-glow mt-3" target="_blank">
+              <i class="fab fa-whatsapp me-2"></i>Start a Conversation
+            </a>
+          </div>
+
+          <div class="col-lg-6">
+            <form id="contactForm">
+              <div class="mb-3">
+                <input type="text" class="form-control rounded-pill" placeholder="Your Name" required />
+              </div>
+              <div class="mb-3">
+                <input type="email" class="form-control rounded-pill" placeholder="Email Address" required />
+              </div>
+              <div class="mb-3">
+                <textarea rows="4" class="form-control rounded-4" placeholder="Tell me about your project..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-glow w-100 rounded-pill">
+                Send Message <i class="fas fa-paper-plane ms-2"></i>
+              </button>
+              <p class="small text-muted mt-3">I’ll reply as soon as possible.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="pt-5 pb-4">
+    <div class="container text-center">
+      <div class="mb-3">
+        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+      </div>
+
+      <p class="small text-white-50 mb-0">
+        © 2026 Kamal Ahmed — Full Stack Developer & Freelancer. Built with <i class="fas fa-heart text-danger"></i>.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/916001877757" class="whatsapp-float" target="_blank" aria-label="WhatsApp Chat">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    // Loader
+    window.addEventListener("load", () => {
+      const loader = document.getElementById("loader");
+      loader.style.opacity = "0";
+      loader.style.transition = "opacity 0.4s ease";
+      setTimeout(() => {
+        loader.style.display = "none";
+      }, 450);
     });
-  });
 
-  // Typing animation effect for hero subtitle
-  const textArray = ["MCA Graduate | Full Stack Developer", "Web & App Creator", "AI Tools Specialist", "Freelance Expert"];
-  let index = 0;
-  let charIndex = 0;
-  let currentText = "";
-  const typedElement = document.getElementById("typed-text");
-  function typeEffect() {
-    if (charIndex < textArray[index].length) {
-      typedElement.textContent += textArray[index].charAt(charIndex);
-      charIndex++;
-      setTimeout(typeEffect, 80);
-    } else {
-      setTimeout(eraseEffect, 2000);
+    // AOS Init
+    AOS.init({
+      duration: 800,
+      once: true
+    });
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener("click", function(e) {
+        const targetId = this.getAttribute("href");
+        if (targetId === "#" || targetId === "") return;
+        const targetElem = document.querySelector(targetId);
+        if (targetElem) {
+          e.preventDefault();
+          targetElem.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      });
+    });
+
+    // Typing animation
+    const textArray = [
+      "MCA Graduate | Full Stack Developer",
+      "Web Developer & Freelancer",
+      "Digital Solutions Creator",
+      "Web, App & Business Support"
+    ];
+
+    let index = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    const typedElement = document.getElementById("typed-text");
+
+    function typeEffect() {
+      const currentText = textArray[index];
+
+      if (!isDeleting) {
+        typedElement.textContent = currentText.substring(0, charIndex + 1);
+        charIndex++;
+        if (charIndex === currentText.length) {
+          isDeleting = true;
+          setTimeout(typeEffect, 1500);
+          return;
+        }
+      } else {
+        typedElement.textContent = currentText.substring(0, charIndex - 1);
+        charIndex--;
+        if (charIndex === 0) {
+          isDeleting = false;
+          index = (index + 1) % textArray.length;
+        }
+      }
+
+      setTimeout(typeEffect, isDeleting ? 40 : 80);
     }
-  }
-  function eraseEffect() {
-    if (charIndex > 0) {
-      typedElement.textContent = textArray[index].substring(0, charIndex-1);
-      charIndex--;
-      setTimeout(eraseEffect, 40);
-    } else {
-      index = (index + 1) % textArray.length;
-      setTimeout(typeEffect, 300);
-    }
-  }
-  typeEffect();
+    typeEffect();
 
-  // Download CV (simulate download)
-  const downloadBtn = document.getElementById("downloadCVBtn");
-  downloadBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    // Creating a dummy CV blob for demo; in real project link actual pdf.
-    const cvContent = `Kamal Ahmed - Full Stack Developer\nExperience: 4+ years freelance\nSkills: React, Node, Python, PHP, App Dev, AI Tools\nEmail: kamal@kamal.dev\nPhone: +91 60018 77757`;
-    const blob = new Blob([cvContent], {type: 'text/plain'});
-    const link = document.createElement('a');
-    link.href = URL.createObjectURL(blob);
-    link.download = 'Kamal_Ahmed_CV.txt';
-    link.click();
-    URL.revokeObjectURL(link.href);
-  });
-
-  // Simple contact form alert
-  const contactForm = document.getElementById("contactForm");
-  if(contactForm) {
-    contactForm.addEventListener("submit", (e) => {
+    // Download CV
+    const downloadBtn = document.getElementById("downloadCVBtn");
+    downloadBtn.addEventListener("click", function(e) {
       e.preventDefault();
-      alert("📩 Thanks for reaching out! Kamal will respond within 24 hours via WhatsApp or email.");
+      const cvContent = `
+Kamal Ahmed
+MCA Graduate | Full Stack Developer
+
+Skills:
+- C, C++, HTML5, CSS3, JavaScript
+- React, Node.js, Python, PHP, R
+- Web Development
+- App Development
+- Digital Marketing
+- Domain & Hosting
+- Email, SMS & WhatsApp Solutions
+
+Contact:
+Email: support@ilovetoolshub.com
+Phone: +91 6001877757
+      `.trim();
+
+      const blob = new Blob([cvContent], { type: "text/plain" });
+      const link = document.createElement("a");
+      link.href = URL.createObjectURL(blob);
+      link.download = "Kamal_Ahmed_CV.txt";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(link.href);
+    });
+
+    // Contact form
+    const contactForm = document.getElementById("contactForm");
+    contactForm.addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("Thank you for contacting me. I will get back to you soon.");
       contactForm.reset();
     });
-  }
 
-  // Navbar active link highlight on scroll
-  const sections = document.querySelectorAll("section");
-  const navLinks = document.querySelectorAll(".nav-link");
-  window.addEventListener("scroll", () => {
-    let current = "";
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop - 100;
-      if(scrollY >= sectionTop) current = section.getAttribute("id");
+    // Navbar active link and scroll effect
+    const sections = document.querySelectorAll("section[id]");
+    const navLinks = document.querySelectorAll(".nav-link");
+    const navbar = document.getElementById("mainNavbar");
+
+    window.addEventListener("scroll", () => {
+      // Navbar shadow
+      if (window.scrollY > 40) {
+        navbar.classList.add("scrolled");
+      } else {
+        navbar.classList.remove("scrolled");
+      }
+
+      let current = "";
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 120;
+        const sectionHeight = section.offsetHeight;
+        if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+          current = section.getAttribute("id");
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === "#" + current) {
+          link.classList.add("active");
+        }
+      });
     });
-    navLinks.forEach(link => {
-      link.classList.remove("active");
-      if(link.getAttribute("href") === `#${current}`) link.classList.add("active");
-    });
-  });
-</script>
+  </script>
 </body>
 </html>
